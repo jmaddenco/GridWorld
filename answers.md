@@ -44,7 +44,8 @@
 
 1. Test the setDirection method with the following inputs and complete the table, giving the compass direction each input represents.
 
->A:
+>A: 
+
 | Degrees | Compass Direction |
 |---------|-------------------|
 | 0       | North             |
@@ -69,6 +70,10 @@
 
 >A: The bug went under the rock when it was moved on top of it. When the rock was moved off the bug is gone.
 
-# Part 2
+# Part 2: Bug Variations
 
-1.
+###Methods of the Bug Class
+
+1. What is the role of the instance variable sideLenght?
+
+>A: 
