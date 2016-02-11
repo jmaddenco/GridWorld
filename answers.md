@@ -63,7 +63,7 @@
 1. You can make a for loop which starts on the second row and uses the method Arraylist<E> getNeighbors(Location loc), then continuing that on every third line to use the fewest amount of checks. In order to ensure everything is checked, you must make it check the second to last line in every grid. In a bounded grid, you can use the method ArrayList<Location> getEmpty AdjeacentLocations(Location loc) and use the same pattern. 
 2. use the method isValid(10,10), and the boolean returned will tell you
 3. We cannot see the code for Grid because it is an interface, basically a list of methods for the classes to draw from. The implementations of these are found in the BoundedGrid and UnboundedGrid classes which use the interface.
-4. I think it would be better to use an ArrayList rather than an Array because an Array is a set length list, and since we dont know how many objects we will find, an ArrayList with a variable length makes more sense. 
+4. I think it would be better to use an ArrayList rather than an Array because an Array is a set length list, and since we don't know how many objects we will find, an ArrayList with a variable length makes more sense. 
 
 #### Set 5 Answers:
 1. Each actor has a color, direction, and location
