@@ -52,27 +52,27 @@
 
 # **Part 3:**
 
-#### Set 3 Answers:
+#### Set 3:
 1. You would use the command public int firstRow = loc1.getRow() and it will return the row.
 2. b will equal false because loc1 and loc2 have different values for their row and columns
 3. loc3 will have (4,4);
 4. 135
 5. It knows based upon the parameter it is passed, since that parameter is a direction.
 
-#### Set 4 Answers:
+#### Set 4:
 1. You can make a for loop which starts on the second row and uses the method Arraylist<E> getNeighbors(Location loc), then continuing that on every third line to use the fewest amount of checks. In order to ensure everything is checked, you must make it check the second to last line in every grid. In a bounded grid, you can use the method ArrayList<Location> getEmpty AdjeacentLocations(Location loc) and use the same pattern. 
 2. use the method isValid(10,10), and the boolean returned will tell you
 3. We cannot see the code for Grid because it is an interface, basically a list of methods for the classes to draw from. The implementations of these are found in the BoundedGrid and UnboundedGrid classes which use the interface.
 4. I think it would be better to use an ArrayList rather than an Array because an Array is a set length list, and since we don't know how many objects we will find, an ArrayList with a variable length makes more sense. 
 
-#### Set 5 Answers:
+#### Set 5:
 1. Each actor has a color, direction, and location
 2. Its default direction is north, and its default color is red.
 3. Actor is a class instead of an interface because we not only use methods from Actor, we make variations of Actor.
 4. An actor cannot put itself into a grid twice without removing itself because each actor only has one location. Same iwth removing itself twice. And yes, the actor can remove itself and put itself back in. 
 5. An actor can turn 90 degrees with two calls of the turn() method.
 
-#### Set 6 Answers:
+#### Set 6:
 1. The comparison of if(gr == null) return false keeps the bug from moving outside of the grid. If the grid is null, the actor will not move.
 2. The return statement return (neightbor == instanceOfRock) which checks whether the neighbor is a rock.
 3. canMove must use the isValid method from Grid in order to determine whether adjacent squares are null or not.
