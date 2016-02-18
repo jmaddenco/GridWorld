@@ -80,3 +80,26 @@
 10. The flower.putSelfInGrid(gr, loc) places the flower onto the grid.
 11. It must call it four times
 
+# **Part 4:**
+#### Set 7 Answers:
+1. Critter has the methods act, getActors, processActors, getMoveLocations, selectMoveLocation, and makeMove.
+2.  In order to act, the critter must getActors(), processActors(), getMoveLocations(), selectMoveLocations(), makeMove().
+3.  No, they should not override the method. The getActors method just returns the actors around the critter. There would be no reason to override that method, but I suppose it could if we wanted to.
+4.  It can check whether there is a rock or a critter, and if there is it can remove the actor. 
+5.  The getLocation method to find the actor, the getMoveLocation method to decide where to move, and finally the move method to carry out the move.
+6.  Critter is not the Elder Parent class, it inherits its constructor from another class.
+
+#### Set 8 Answers:
+1. Because rather than overriding act, the Chameleon overrides the processActors method which is used in the Critters act method. This changes only the part required, and not the entire process as a whole.
+2. In order to turn itself, it changes its direction and then moves in that direction. Therefore, when super is called it uses the makeMove method of the parent.
+3. You could override the makeMove method again and in making the Chameleon move, place a flower in its previous place. 
+4. Because the getActors method will serve the same purpose for both critters. The Chameleon will use it just the same. 
+5. The Actor class must contian the getLocation method.
+6. Through the getGrid() method which it inherits from the Actor class.
+
+#### Set 9 Answers:
+1. Because the CrabCritter does not need to use the processaActors method any differently than the other critters. The processActors method only removes actors from the grid if there is a conflict.
+2. A CrabCritter will, after moving, test to see if there is an actor in the three spaces in front of it. If there is, it will check what type of actor it is, and if its not a rock or another critter, then it will remove that actor from the grid.
+3. To get not only the direction in which it intends to move, but to find the locations in the directions 45 degrees to the left or right of the forward square such that it can test if those locations contian an edible item.
+4. The possible locations would be (4,3), (4,4), and (4,5). 
+5. Both the crab and the critter move one space at a time in a certain direction. The only real difference is that the crab will remove objects in a range in front of it, and the critter 
