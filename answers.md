@@ -1,39 +1,35 @@
-# Part 1 : Observing and Experimenting with GridWorld
-
-### Set 1
-1. The bug continues to move one space in front of it until it detects a wall or obstical in front of it, then it will turn 45 degrees East of its front until nothing is in front of it.
-2. The bug moves one space in front of it until it finds a obstical in front of it, then it will turn 45 degrees East of its front until nothing is in front of it.
-3.  It will continuously turn East 45 degrees.
-4. It will leave a flower behind.
-5. The bug will turn 45 degrees East until nothing is in front of it, then it will move a space.
-6. It will turn 45 degrees East until there is nothing in front of it, then it will move a space.
-7. No the flowers don't move.
+# **Part 1:**
+#### Set 1 Answers:
+1. The bug does not always move because if it encounters a rock, it will not move a space but will rotate. In addition to this, if the bug is fully encased in rocks, it will not move to a new location.
+2. The bug rotates clockwise when it encounters an object, so it moves clockwise as well.
+3. The bug rotates at 45 degree angles.
+4. Bugs leave flowers behind them when they move.
+5. When the bug reaches the end of the grid, it rotates clockwise to the nearest cardinal direction.
+6. The bug will rotate clockwise 45 degrees to move past it.
+7. The flowers do not move.
 8. The flowers simply sit in the tracks behind a bug, and change color if a different colored bug travels over it.
-9. The rock is an immovable obstical that nothing can go through.
-10. No, both cannot exist in one square at any given time. However, when a bug encounters a flower, unlike the other objects, it removes the flower and substitutes the bug in.
+9. A rock does not move and cannot be influenced.
+10. No, both cannot exist in one square at any given time. However, when a bug encounters a flower, unlike the other objects, it removes the flower ans substitutes the bug in.
 
 ### Exercises
+1. | Degrees | Compass Direction |
+   |---------|-------------------|
+   | 0       | North             |
+   | 45      | North-East        |
+   | 90      | East              |
+   | 135     | South-East        |
+   | 180     | South             |
+   | 225     | South-West        |
+   | 270     | West              |
+   | 315     | North-West        |
+   | 360     | North             |
+2. You can move the bug in any direction, to any square, as long as the square is on the grid. If you attempt to move the bug to a square that does not exist on the grid, an error occurs and the bug does not move. 
+3. To change the color of all 3 I used the setColor() method.
+4. If you move a rock on to a bug, and then move the rock again, the bug has been replaced by the rock so there is only 1 actor remaining. The rock replaced the bug at that specific location and in doing so, removed the actor.
 
-1.  
-| Degrees | Compass Direction |
-|---------|-------------------|
-| 0       | North             |
-| 45      | North East        |
-| 90      | East              |
-| 135     | South East        |
-| 180     | South             |
-| 225     | South West        |
-| 270     | West              |
-| 315     | North West        |
-| 360     | North             |
-2. When you type a 2 in the first box and a 1 in the second box, the bug will be moved to the top right and then 2 down and 1 right. When you type something larger than the box, it will return an error and wont move anywhere.
-3. I changed Alice's color to blue. I changed the alice.setColor(Color.ORANGE); method to alice.setColor(Color.BLUE);.
-4. The bug went under the rock when it was moved on top of it. When the rock was moved off the bug is gone.
+# Part 2
 
-# Part 2: Bug Variations
-
-###Methods of the Bug Class
-
+#### Set 2 Answers:
 1. The side length instance variable determines the amount of spaces the bug will move forward before turning. 
 2. The steps variable keeps track of how many times the bug has moved, and compares that to the size of the square that the bug must create.
 3. Because in the turn() method, the bug only turns 45 degrees, and the angle of each square corner is 90 degrees.
@@ -51,7 +47,6 @@
 5. To add another actor you simply create the object BoxBug name = new BoxBug(length) and then you add it to the world with world.add(new Location (x, y), nameofbug)
 
 # **Part 3:**
-
 #### Set 3 Answers:
 1. You would use the command public int firstRow = loc1.getRow() and it will return the row.
 2. b will equal false because loc1 and loc2 have different values for their row and columns
@@ -63,7 +58,7 @@
 1. You can make a for loop which starts on the second row and uses the method Arraylist<E> getNeighbors(Location loc), then continuing that on every third line to use the fewest amount of checks. In order to ensure everything is checked, you must make it check the second to last line in every grid. In a bounded grid, you can use the method ArrayList<Location> getEmpty AdjeacentLocations(Location loc) and use the same pattern. 
 2. use the method isValid(10,10), and the boolean returned will tell you
 3. We cannot see the code for Grid because it is an interface, basically a list of methods for the classes to draw from. The implementations of these are found in the BoundedGrid and UnboundedGrid classes which use the interface.
-4. I think it would be better to use an ArrayList rather than an Array because an Array is a set length list, and since we don't know how many objects we will find, an ArrayList with a variable length makes more sense. 
+4. I think it would be better to use an ArrayList rather than an Array because an Array is a set length list, and since we dont know how many objects we will find, an ArrayList with a variable length makes more sense. 
 
 #### Set 5 Answers:
 1. Each actor has a color, direction, and location
@@ -82,4 +77,6 @@
 7. It could be avoided by using getLocation over and over again, but that would be way too redundant and sloppy.
 8. Because the flower color is inherited from the actor.
 9. It should, the bug places flowers in spaces where the bug was and is no longer.
-10. 
+10. The flower.putSelfInGrid(gr, loc) places the flower onto the grid.
+11. It must call it four times
+
