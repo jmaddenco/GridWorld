@@ -9,10 +9,11 @@
 7. The flowers do not move.
 8. The flowers simply sit in the tracks behind a bug, and change color if a different colored bug travels over it.
 9. A rock does not move and cannot be influenced.
-10. No, both cannot exist in one square at any given time. However, when a bug encounters a flower, unlike the other objects, it removes the flower ans substitutes the bug in.
+10. No, both cannot exist in one square at any given time. However, when a bug encounters a flower, unlike the other objects, it removes the flower and substitutes the bug in.
 
 ### Exercises
-1. | Degrees | Compass Direction |
+1.
+   | Degrees | Compass Direction |
    |---------|-------------------|
    | 0       | North             |
    | 45      | North-East        |
@@ -77,9 +78,6 @@
 7. It could be avoided by using getLocation over and over again, but that would be way too redundant and sloppy.
 8. Because the flower color is inherited from the actor.
 9. It should, the bug places flowers in spaces where the bug was and is no longer.
-<<<<<<< HEAD
-10. 
-=======
 10. The flower.putSelfInGrid(gr, loc) places the flower onto the grid.
 11. It must call it four times
 
@@ -106,4 +104,4 @@
 3. To get not only the direction in which it intends to move, but to find the locations in the directions 45 degrees to the left or right of the forward square such that it can test if those locations contian an edible item.
 4. The possible locations would be (4,3), (4,4), and (4,5). 
 5. Both the crab and the critter move one space at a time in a certain direction. The only real difference is that the crab will remove objects in a range in front of it, and the critter 
->>>>>>> 8712cd1f9abb3d3687a31f4594c2917550a96da1
+
