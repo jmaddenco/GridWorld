@@ -104,4 +104,4 @@
 3. To get not only the direction in which it intends to move, but to find the locations in the directions 45 degrees to the left or right of the forward square such that it can test if those locations contian an edible item.
 4. The possible locations would be (4,3), (4,4), and (4,5). 
 5. Both the crab and the critter move one space at a time in a certain direction. The only real difference is that the crab will remove objects in a range in front of it, and the critter 
-
+6. 
