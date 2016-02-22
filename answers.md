@@ -34,7 +34,7 @@
 1. The side length instance variable determines the amount of spaces the bug will move forward before turning. 
 2. The steps variable keeps track of how many times the bug has moved, and compares that to the size of the square that the bug must create.
 3. Because in the turn() method, the bug only turns 45 degrees, and the angle of each square corner is 90 degrees.
-4. Because the BoxBug class is an extention of bug, which has that method.
+4. Because the BoxBug class is an extension of bug, which has that method.
 5. No, the box size will not always be the same. This is because BoxBug requires a length argument when it is called, which means that each instance of a BoxBug will potentially have a different size.
 6. No, the path a BoxBug takes can never change. This is defined in a method in the BoxBug class which cannot change.
 7. The steps will be zero when the length passed to that instance of BoxBug is 0, because steps starts as zero and will only increase for as long as length is greater than 0.
@@ -59,13 +59,13 @@
 1. You can make a for loop which starts on the second row and uses the method Arraylist<E> getNeighbors(Location loc), then continuing that on every third line to use the fewest amount of checks. In order to ensure everything is checked, you must make it check the second to last line in every grid. In a bounded grid, you can use the method ArrayList<Location> getEmpty AdjeacentLocations(Location loc) and use the same pattern. 
 2. use the method isValid(10,10), and the boolean returned will tell you
 3. We cannot see the code for Grid because it is an interface, basically a list of methods for the classes to draw from. The implementations of these are found in the BoundedGrid and UnboundedGrid classes which use the interface.
-4. I think it would be better to use an ArrayList rather than an Array because an Array is a set length list, and since we dont know how many objects we will find, an ArrayList with a variable length makes more sense. 
+4. I think it would be better to use an ArrayList rather than an Array because an Array is a set length list, and since we don't know how many objects we will find, an ArrayList with a variable length makes more sense. 
 
 #### Set 5 Answers:
 1. Each actor has a color, direction, and location
 2. Its default direction is north, and its default color is red.
 3. Actor is a class instead of an interface because we not only use methods from Actor, we make variations of Actor.
-4. An actor cannot put itself into a grid twice without removing itself because each actor only has one location. Same iwth removing itself twice. And yes, the actor can remove itself and put itself back in. 
+4. An actor cannot put itself into a grid twice without removing itself because each actor only has one location. Same with removing itself twice. And yes, the actor can remove itself and put itself back in. 
 5. An actor can turn 90 degrees with two calls of the turn() method.
 
 #### Set 6 Answers:
@@ -95,13 +95,13 @@
 2. In order to turn itself, it changes its direction and then moves in that direction. Therefore, when super is called it uses the makeMove method of the parent.
 3. You could override the makeMove method again and in making the Chameleon move, place a flower in its previous place. 
 4. Because the getActors method will serve the same purpose for both critters. The Chameleon will use it just the same. 
-5. The Actor class must contian the getLocation method.
+5. The Actor class must contain the getLocation method.
 6. Through the getGrid() method which it inherits from the Actor class.
 
 #### Set 9 Answers:
 1. Because the CrabCritter does not need to use the processaActors method any differently than the other critters. The processActors method only removes actors from the grid if there is a conflict.
 2. A CrabCritter will, after moving, test to see if there is an actor in the three spaces in front of it. If there is, it will check what type of actor it is, and if its not a rock or another critter, then it will remove that actor from the grid.
-3. To get not only the direction in which it intends to move, but to find the locations in the directions 45 degrees to the left or right of the forward square such that it can test if those locations contian an edible item.
+3. To get not only the direction in which it intends to move, but to find the locations in the directions 45 degrees to the left or right of the forward square such that it can test if those locations contain an edible item.
 4. The possible locations would be (4,3), (4,4), and (4,5). 
 5. Both the crab and the critter move one space at a time in a certain direction. The only real difference is that the crab will remove objects in a range in front of it, and the critter 
 6. 
