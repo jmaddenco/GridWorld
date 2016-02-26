@@ -33,7 +33,7 @@
 #### Set 2 Answers:
 1. The side length instance variable determines the amount of spaces the bug will move forward before turning. 
 2. The steps variable keeps track of how many times the bug has moved, and compares that to the size of the square that the bug must create.
-3. Because in the turn() method, the bug only turns 45 degrees, and the angle of each square corner is 90 degrees.
+3. Because in the turn method, the bug only turns 45 degrees, and the angle of each square corner is 90 degrees.
 4. Because the BoxBug class is an extension of bug, which has that method.
 5. No, the box size will not always be the same. This is because BoxBug requires a length argument when it is called, which means that each instance of a BoxBug will potentially have a different size.
 6. No, the path a BoxBug takes can never change. This is defined in a method in the BoxBug class which cannot change.
@@ -104,5 +104,10 @@
 3. To get not only the direction in which it intends to move, but to find the locations in the directions 45 degrees to the left or right of the forward square such that it can test if those locations contain an edible item.
 4. The possible locations would be (4,3), (4,4), and (4,5). 
 5. Both the crab and the critter move one space at a time in a certain direction. The only real difference is that the crab will remove objects in a range in front of it, and the critter 
+<<<<<<< HEAD
 6. If the crab cannot move, it turns.
 7. Because it inherits the method processActors from critter, which states that it will not remove an instance of itself from the grid.
+=======
+6. The makeMove() determines if the critter will turn instead of moving.
+7. The CrabCritter objects don't eat each other due to
+>>>>>>> part4
