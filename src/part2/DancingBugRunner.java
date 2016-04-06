@@ -30,8 +30,7 @@ import java.awt.Color;
 public class DancingBugRunner {
 	
 	public static void main(String[] args) {
-		int[] dance = {1,5,7,1,19,14,29,3,4,5,0,1,2,3,4,5};
-		
+		int[] dance = {1, 3, 6, 8};
 		ActorWorld world = new ActorWorld();
 		DancingBug alice = new DancingBug(dance);
 		alice.setColor(Color.ORANGE);
@@ -39,6 +38,5 @@ public class DancingBugRunner {
 		world.add(new Location(7, 8), alice);
 		world.add(new Location(5, 5), bob);
 		world.show();
-
 	}
 }

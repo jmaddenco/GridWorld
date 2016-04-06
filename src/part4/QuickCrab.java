@@ -7,8 +7,9 @@ import info.gridworld.grid.Grid;
 import info.gridworld.grid.Location;
 
 public class QuickCrab extends CrabCritter {
+	
 	public QuickCrab() {
-		setColor(Color.BLUE);
+		setColor(Color.GRAY);
 	}
 	
 	public ArrayList<Location> getLocationsInDirections(int[] directions) {
@@ -18,9 +19,14 @@ public class QuickCrab extends CrabCritter {
 
 		for (int d : directions) {
 			Location neighborLoc = loc.getAdjacentLocation(getDirection() + d);
-			Location fartherNeighborLoc = neighborLoc.getAdjacentLocation(getDirection() + d);
-				locs.add(fartherNeighborLoc);
+			if (gr.isValid(neighborLoc)) {
+				Location fartherNeighborLoc = neighborLoc.getAdjacentLocation(getDirection() + d);
+				if (gr.isValid(fartherNeighborLoc)) {
+					locs.add(fartherNeighborLoc);
+				}
 			}
+		}
 		return locs;
 	}
+	
 }

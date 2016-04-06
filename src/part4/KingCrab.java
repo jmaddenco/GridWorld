@@ -1,6 +1,5 @@
 package part4;
 
-import java.awt.Color;
 import java.util.ArrayList;
 
 import info.gridworld.actor.Actor;
@@ -20,4 +19,5 @@ public class KingCrab extends CrabCritter {
 			}
 		}
 	}
+
 }
